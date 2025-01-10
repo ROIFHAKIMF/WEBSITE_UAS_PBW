@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: poppins !important;
+}
+
+img{
+    width: 500px;
+    height: 630px;
+}
+.navbar{
+    z-index: 999;
+}
+.nav-link {
+    transition:none !important; /* Atur durasi dan easing */
+}
+
+.nav-link.active {
+    color: rgb(33,37,41) !important;/* Warna teks */
+    background-color: #ffffff; /* Warna latar belakang */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    border-radius: 50px; /* Opsional: untuk sudut bulat */
+    min-width: 80px;
+    width: auto;
+    text-align: center;
+}
+.card{
+    height: auto !important;
+}
+.card img{
+    aspect-ratio: 1;
+}
+
+
+.icon1, .icon2, .icon3{
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+    animation: showtext 2s ease forwards;
+}
+.icon1 p, .icon2 p, .icon3 p{
+    display: none;
+    height: 30px;
+    animation: hidetext 15s ease forwards;
+}
+@keyframes hidetext{
+    80%{
+        display: flex;
+        opacity: 1;
+    }
+    100%{
+        display: none;
+        opacity: 0;
+    }
+}
+.icon1 i:hover + p,
+.icon2 i:hover + p,
+.icon3 i:hover + p{
+    display: flex;
+}
+.foot-icon p:hover{
+    display: flex;
+    opacity: 1;
+}
